@@ -5,29 +5,26 @@
 [Latest Version]: https://img.shields.io/crates/v/ghac.svg
 [crates.io]: https://crates.io/crates/ghac
 
-`ghac` is a generated gRPC rust client for GitHub Actions Cache service V2.
+`ghac` is a generated proto definitions for GitHub Actions Cache service V2.
 
 Please note:
 
 - ghac is a private service, and its API may change at any time. If you encounter any issues, please report them.
-- This crate only provides a generated gRPC client. For a high-level API, please refer to [opendal](https://github.com/apache/opendal), which allows access to all storage using the same API.
+- This crate only provides a generated proto definitions. For a high-level API, please refer to [opendal](https://github.com/apache/opendal), which allows access to all storage using the same API.
 
 ## Quick Start
 
 ```rust
-use ghac::v1::cache_service_client::CacheServiceClient;
+use prost::Message;
 use ghac::v1::CreateCacheEntryRequest;
-///
-async fn test() -> Result<(), Box<dyn std::error::Error>> {
-    let mut client = CacheServiceClient::connect("http://127.0.0.1:1234").await?;
-///
-    let request = tonic::Request::new(CreateCacheEntryRequest {
+
+fn test() -> Result<(), Box<dyn std::error::Error>> {
+    let request = CreateCacheEntryRequest {
         metadata: None,
         key: "hello, world!".to_string(),
         version: "1".to_string(),
-    });
-///
-    let response = client.create_cache_entry(request).await?;
+    };
+    let bs = request.encode_to_vec();
     Ok(())
 }
 ```
