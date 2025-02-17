@@ -11,4 +11,4 @@ edition = "2021"
 license = "Apache-2.0"
 
 [dependencies]
-tonic-build = { version = "0.12", features = ["cleanup-markdown"] }
+prost-build = "0.13"
