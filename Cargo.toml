@@ -16,4 +16,4 @@ members = [
 
 [dependencies]
 prost = "0.13"
-tonic = "0.12"
+tonic = { version = "0.12", default-features = false, features = ["codegen","prost", "channel"] }
