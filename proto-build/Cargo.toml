@@ -3,7 +3,6 @@ name = "ghac-proto-build"
 version = "0.0.0"
 publish = false
 
-authors = ["Xuanwo <github@xuanwo.io>>"]
 categories = ["command-line-utilities"]
 description = "Replace with description"
 documentation = "https://docs.rs/ghac"
