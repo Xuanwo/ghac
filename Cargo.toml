@@ -1,5 +1,4 @@
 [package]
-authors = ["Xuanwo <github@xuanwo.io>>"]
 categories = ["command-line-utilities"]
 description = "Replace with description"
 documentation = "https://docs.rs/ghac"
@@ -7,7 +6,7 @@ repository = "https://github.com/Xuanwo/ghac"
 edition = "2021"
 license = "Apache-2.0"
 name = "ghac"
-version = "0.0.1"
+version = "0.1.0"
 
 [workspace]
 members = [
