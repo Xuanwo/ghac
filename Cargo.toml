@@ -15,4 +15,4 @@ members = [
 ]
 
 [dependencies]
-prost = "0.13"
+prost = "0.14"
