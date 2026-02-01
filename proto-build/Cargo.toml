@@ -11,4 +11,4 @@ edition = "2021"
 license = "Apache-2.0"
 
 [dependencies]
-prost-build = "0.13"
+prost-build = "0.14"
