@@ -11,7 +11,7 @@ pub struct CreateCacheEntryRequest {
     #[prost(string, tag = "3")]
     pub version: ::prost::alloc::string::String,
 }
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Clone, PartialEq, Eq, Hash, ::prost::Message)]
 pub struct CreateCacheEntryResponse {
     #[prost(bool, tag = "1")]
     pub ok: bool,
@@ -34,7 +34,7 @@ pub struct FinalizeCacheEntryUploadRequest {
     #[prost(string, tag = "4")]
     pub version: ::prost::alloc::string::String,
 }
-#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+#[derive(Clone, Copy, PartialEq, Eq, Hash, ::prost::Message)]
 pub struct FinalizeCacheEntryUploadResponse {
     #[prost(bool, tag = "1")]
     pub ok: bool,
@@ -57,7 +57,7 @@ pub struct GetCacheEntryDownloadUrlRequest {
     #[prost(string, tag = "4")]
     pub version: ::prost::alloc::string::String,
 }
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Clone, PartialEq, Eq, Hash, ::prost::Message)]
 pub struct GetCacheEntryDownloadUrlResponse {
     #[prost(bool, tag = "1")]
     pub ok: bool,
@@ -77,7 +77,7 @@ pub struct CacheMetadata {
     #[prost(message, repeated, tag = "2")]
     pub scope: ::prost::alloc::vec::Vec<CacheScope>,
 }
-#[derive(Clone, PartialEq, ::prost::Message)]
+#[derive(Clone, PartialEq, Eq, Hash, ::prost::Message)]
 pub struct CacheScope {
     /// Determines the scope of the cache entry
     #[prost(string, tag = "1")]
